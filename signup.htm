@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <form action="">
+            <div>
+                <h1>Signup Page</h1>                
+            </div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Please enter the name">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Please enter the email">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Please enter the password">
+            </div>
+            <br>
+            <div>
+                <label for="phno">Phone Number</label>
+                <input type="tel" id="phno" placeholder="Please enter the phone number">
+            </div>
+            <br>
+            <button id="signup">Signup</button>
+            <br>
+        </form>
+        
+
+        <script>
+        let a = document.getElementById('signup')
+a.addEventListener('click',(e)=>{
+    e.preventDefault()
+    let name = document.getElementById('name').value
+    let email = document.getElementById('email').value
+    let password = document.getElementById('password').value
+    let phno = document.getElementById('phno').value
+    window.sessionStorage.setItem('sname',name)
+    window.sessionStorage.setItem('semail',email)
+    window.sessionStorage.setItem('spassword',password)
+    window.sessionStorage.setItem('sphno',phno)
+    window.open('./login.htm',()=>{target="_self"})
+})
+</script>
+    
+
+
+
+</body>
+</html>

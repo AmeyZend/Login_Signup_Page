@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+
+    <form action="">
+        <div>
+            <h1>Login Page</h1>                
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Please enter the name">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Please enter the password">
+        </div>
+        <br>
+        <button id="login">Login</button>
+        <br>
+    </form>
+
+    <script>
+        let a = document.getElementById('login')
+        a.addEventListener('click',(e)=>{
+            e.preventDefault()
+            let name = document.getElementById('name').value
+            let password = document.getElementById('password').value
+            let username = window.sessionStorage.setItem('sname')
+            let userpassword = window.sessionStorage.setItem('spassword')
+            if (name===username & password===userpassword){
+                window.open("./index.htm")
+            }
+            else{
+                console.log("You have entered wrong thing");
+            }
+        })
+    </script>
+
+
+
+    
+</body>
+</html>
